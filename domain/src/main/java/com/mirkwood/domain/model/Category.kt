@@ -1,4 +1,4 @@
-package com.mirkwood.data.networking.model
+package com.mirkwood.domain.model
 
 data class Category(
     val idCategory: String,

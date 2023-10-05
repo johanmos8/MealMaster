@@ -2,6 +2,7 @@ package com.mirkwood.data.di
 
 import com.google.gson.Gson
 import com.mirkwood.data.networking.ApiService
+import com.mirkwood.data.util.URL_BASE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,6 +34,7 @@ object NetworkingModule {
 
         return Retrofit.Builder()
             .client(okHttpClient)
+            .baseUrl(URL_BASE)
             .addConverterFactory(GsonConverterFactory.create(Gson()))
             .build()
     }
